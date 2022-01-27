@@ -8,13 +8,15 @@ fs.readFile("./Geography.json", "utf8", (err, jsonString) => {
     aman.forEach(element => {
         countries.push({
             "name": element.name,
-            "id": element.id
+            "id": element.id,
+            "emoji": element.emoji,
+            "emojiU": element.emojiU
         });
         stateArray = [];
         element.states.forEach(element1 => {
             stateArray.push({
                 "name": element1.name,
-                "id": element1.id
+                "id": element1.id,
             });
             cityArray = [];
             element1.cities.forEach(element2 => cityArray.push({
