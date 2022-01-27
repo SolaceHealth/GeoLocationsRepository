@@ -7,6 +7,7 @@ fs.readFile("./Geography.json", "utf8", (err, jsonString) => {
     let cityArray = [];
     aman.forEach(element => {
         countries.push({
+            "dial_code": "+" + element.phone_code,
             "name": element.name,
             "id": element.id,
             "emoji": element.emoji,
